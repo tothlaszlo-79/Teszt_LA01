@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ReportClass>
+@{
+    ViewData["Title"] = "Riport";
+}
+
+<h1>Minta Riport</h1>
+<table>
+    <thead>
+        <tr>
+            <td>
+                Product Id
+            </td>
+            <td>
+                Product Name
+            </td>
+            <td>
+                Product Price
+            </td>
+            <td>
+                Product Description
+            </td>
+            <td>
+                Product Category
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductId</td>
+                <td>@item.ProductName</td>
+                <td>@item.Price</td>
+                <td>@item.Description</td>
+                <td>@item.CategoryName</td>
+             </tr>
+        }
+    </tbody>
+</table>
